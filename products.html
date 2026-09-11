@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products | Bath Bombs Factory | Beauty Gift Factory | Body Care Factory | IRIS Manufacturing</title>
+<meta name="description" content="Explore our full range of premium bath and body products. Bath bombs factory, beauty gift factory, body care factory, shower gel factory. OEM/ODM services available.">
+<link rel="canonical" href="https://irismanufacturing.pages.dev/products.html">
+<style>
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a4a6a;
+  --text-muted: #8a8aa0;
+  --accent-1: #e67e22;
+  --accent-2: #f39c12;
+  --accent-3: #d35400;
+  --gradient-primary: linear-gradient(135deg, #e67e22, #f39c12);
+  --radius-lg: 16px;
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 60px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.nav-logo span {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover { color: var(--text-primary); }
+
+.hero {
+  padding: 160px 0 80px;
+  text-align: center;
+  background: var(--bg-secondary);
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.products-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px clamp(20px, 5vw, 60px);
+}
+
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 100px;
+  scroll-margin-top: 100px;
+}
+
+.product-detail:nth-child(even) {
+  direction: rtl;
+}
+
+.product-detail:nth-child(even) > * {
+  direction: ltr;
+}
+
+.product-detail-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+}
+
+.product-detail-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-detail-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(230, 126, 34, 0.1);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-3);
+  margin-bottom: 16px;
+  width: fit-content;
+}
+
+.product-detail-content h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.product-detail-content p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.product-features {
+  list-style: none;
+  margin-bottom: 32px;
+}
+
+.product-features li {
+  padding: 8px 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.product-features li::before {
+  content: '✓';
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(230, 126, 34, 0.12);
+  border-radius: 50%;
+  font-size: 0.75rem;
+  color: var(--accent-3);
+  flex-shrink: 0;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 14px 32px;
+  background: var(--gradient-primary);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 100px;
+  transition: all 0.3s;
+  width: fit-content;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(230, 126, 34, 0.3);
+}
+
+.footer {
+  background: var(--text-primary);
+  color: #fff;
+  padding: 60px clamp(20px, 5vw, 60px);
+  text-align: center;
+}
+
+.footer p { opacity: 0.7; font-size: 0.9rem; }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .product-detail {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .product-detail:nth-child(even) {
+    direction: ltr;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo"><span>IRIS</span> Manufacturing</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Our Products</h1>
+  <p>Premium bath and body products crafted with precision and care. Explore our full range below.</p>
+</section>
+
+<section class="products-section">
+
+  <div class="product-detail" id="bath-bombs">
+    <div class="product-detail-image">
+      <img src="bath-bombs.jpg" alt="Bath Bombs & Fizzers">
+    </div>
+    <div class="product-detail-content">
+      <span class="product-tag">Best Seller</span>
+      <h2>Bath Bombs & Fizzers</h2>
+      <p>Artisanal bath bombs crafted with essential oils, vibrant colors, and nourishing ingredients. Each bath bomb is hand-pressed and individually wrapped to preserve freshness.</p>
+      <ul class="product-features">
+        <li>Custom shapes, sizes, and colors</li>
+        <li>Essential oil or fragrance options</li>
+        <li>Added moisturizers: shea butter, cocoa butter</li>
+        <li>FDA & EEC certified ingredients</li>
+        <li>MOQ as low as 500 pieces</li>
+      </ul>
+      <a href="index.html#contact" class="cta-button">Get a Quote</a>
+    </div>
+  </div>
+
+  <div class="product-detail" id="soap">
+    <div class="product-detail-image">
+      <img src="soap.jpg" alt="Bath Soap">
+    </div>
+    <div class="product-detail-content">
+      <span class="product-tag">Classic</span>
+      <h2>Bath Soap</h2>
+      <p>Premium soaps ranging from traditional cold-process to modern formulations. We produce bar soap, liquid soap, and specialty soap products for global brands.</p>
+      <ul class="product-features">
+        <li>Cold-process & melt-and-pour methods</li>
+        <li>Natural & organic ingredient options</li>
+        <li>Custom molds and shapes</li>
+        <li>Private label packaging design</li>
+        <li>Dermatologist tested formulas</li>
+      </ul>
+      <a href="index.html#contact" class="cta-button">Get a Quote</a>
+    </div>
+  </div>
+
+  <div class="product-detail" id="bubble-bars">
+    <div class="product-detail-image">
+      <img src="bubble-bars.jpg" alt="Bubble Bars">
+    </div>
+    <div class="product-detail-content">
+      <span class="product-tag">Trending</span>
+      <h2>Bubble Bars</h2>
+      <p>Long-lasting bubble bars that create luxurious, fragrant bath experiences. A popular alternative to bath bombs with extended bubble action.</p>
+      <ul class="product-features">
+        <li>Rich, long-lasting bubbles</li>
+        <li>Fun shapes and vibrant colors</li>
+        <li>Skin-safe fragrances</li>
+        <li>Gift-ready packaging options</li>
+        <li>Vegan-friendly formulations</li>
+      </ul>
+      <a href="index.html#contact" class="cta-button">Get a Quote</a>
+    </div>
+  </div>
+
+  <div class="product-detail" id="gift-sets">
+    <div class="product-detail-image">
+      <img src="gift-sets.jpg" alt="Gift Sets">
+    </div>
+    <div class="product-detail-content">
+      <span class="product-tag">Gifting</span>
+      <h2>Gift Sets</h2>
+      <p>Curated collections elegantly packaged for retail and corporate gifting. Complete gift solutions including bath bombs, soaps, and accessories.</p>
+      <ul class="product-features">
+        <li>Custom box and packaging design</li>
+        <li>Mixed product combinations</li>
+        <li>Seasonal and holiday themes</li>
+        <li>Corporate branding options</li>
+        <li>Small batch and bulk orders</li>
+      </ul>
+      <a href="index.html#contact" class="cta-button">Get a Quote</a>
+    </div>
+  </div>
+
+  <div class="product-detail" id="kids-collection">
+    <div class="product-detail-image">
+      <img src="kids-collection.jpg" alt="Kids Collection">
+    </div>
+    <div class="product-detail-content">
+      <span class="product-tag">Kids Series</span>
+      <h2>Kids Collection</h2>
+      <p>Fun, safe, and gentle products designed specifically for children. Mild formulas with fun shapes and kid-friendly fragrances.</p>
+      <ul class="product-features">
+        <li>Hypoallergenic formulas</li>
+        <li>Tear-free and gentle ingredients</li>
+        <li>Fun animal and cartoon shapes</li>
+        <li>Natural colorants only</li>
+        <li>Pediatrician tested</li>
+      </ul>
+      <a href="index.html#contact" class="cta-button">Get a Quote</a>
+    </div>
+  </div>
+
+  <div class="product-detail" id="holiday-series">
+    <div class="product-detail-image">
+      <img src="holiday-series.jpg" alt="Holiday Series">
+    </div>
+    <div class="product-detail-content">
+      <span class="product-tag">Seasonal</span>
+      <h2>Holiday Series</h2>
+      <p>Limited edition seasonal collections for festive occasions. Christmas, Valentine's Day, Halloween, and more themed products.</p>
+      <ul class="product-features">
+        <li>Christmas & New Year themes</li>
+        <li>Valentine's Day specials</li>
+        <li>Halloween collections</li>
+        <li>Easter and spring themes</li>
+        <li>Custom holiday branding</li>
+      </ul>
+      <a href="index.html#contact" class="cta-button">Get a Quote</a>
+    </div>
+  </div>
+
+  <div class="product-detail" id="summer-series">
+    <div class="product-detail-image">
+      <img src="summer-series.jpg" alt="Summer Series">
+    </div>
+    <div class="product-detail-content">
+      <span class="product-tag">Seasonal</span>
+      <h2>Summer Series</h2>
+      <p>Refreshing summer-inspired products with tropical scents and cooling effects. Perfect for beach brands and summer promotions.</p>
+      <ul class="product-features">
+        <li>Tropical fruit fragrances</li>
+        <li>Cooling menthol options</li>
+        <li>Bright, vibrant colors</li>
+        <li>UV-resistant packaging</li>
+        <li>Travel-size friendly</li>
+      </ul>
+      <a href="index.html#contact" class="cta-button">Get a Quote</a>
+    </div>
+  </div>
+
+  <div class="product-detail" id="hand-care">
+    <div class="product-detail-image">
+      <img src="hand-care.jpg" alt="Hand Care">
+    </div>
+    <div class="product-detail-content">
+      <span class="product-tag">Essentials</span>
+      <h2>Hand Care</h2>
+      <p>Complete hand care line including creams, scrubs, and sanitizers. Formulated for daily use with moisturizing and protective benefits.</p>
+      <ul class="product-features">
+        <li>Hand creams and lotions</li>
+        <li>Exfoliating hand scrubs</li>
+        <li>Hand sanitizer (70% alcohol)</li>
+        <li>Anti-aging hand treatments</li>
+        <li>Scented and unscented options</li>
+      </ul>
+      <a href="index.html#contact" class="cta-button">Get a Quote</a>
+    </div>
+  </div>
+
+  <div class="product-detail" id="home-cleaning">
+    <div class="product-detail-image">
+      <img src="home-cleaning.jpg" alt="Home Cleaning">
+    </div>
+    <div class="product-detail-content">
+      <span class="product-tag">Home</span>
+      <h2>Home Cleaning</h2>
+      <p>Eco-friendly home cleaning solutions with natural fragrances. Safe for families and the environment.</p>
+      <ul class="product-features">
+        <li>Plant-based formulations</li>
+        <li>Biodegradable ingredients</li>
+        <li>Natural essential oil scents</li>
+        <li>Refillable packaging options</li>
+        <li>Cruelty-free certified</li>
+      </ul>
+      <a href="index.html#contact" class="cta-button">Get a Quote</a>
+    </div>
+  </div>
+
+  <div class="product-detail" id="accessories">
+    <div class="product-detail-image">
+      <img src="accessories.jpg" alt="Accessories">
+    </div>
+    <div class="product-detail-content">
+      <span class="product-tag">Accessories</span>
+      <h2>Accessories</h2>
+      <p>Complementary accessories including brushes, bowls, and packaging solutions. Complete your product line with our accessory range.</p>
+      <ul class="product-features">
+        <li>Bath brushes and sponges</li>
+        <li>Mixing bowls and scoops</li>
+        <li>Eco-friendly packaging</li>
+        <li>Gift bags and tissue paper</li>
+        <li>Custom printed labels</li>
+      </ul>
+      <a href="index.html#contact" class="cta-button">Get a Quote</a>
+    </div>
+  </div>
+
+</section>
+
+<footer class="footer">
+  <p>&copy; 2026 IRIS Manufacturing Ltd. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
